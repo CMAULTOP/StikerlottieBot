@@ -1,0 +1,21 @@
+{
+  "name": "stiker-lottie-bot",
+  "author": "cmaul_",
+  "scripts": {
+    "start": "bun index.ts"
+  },
+  "version": "1.0.0",
+  "description": "Скачивает стикерпак из Телеграма в виде набора JSON-файлов.",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3"
+  }
+}
