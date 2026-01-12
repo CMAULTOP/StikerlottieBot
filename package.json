@@ -16,6 +16,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "jszip": "^3.10.1",
     "telegraf": "^4.16.3"
   }
 }
