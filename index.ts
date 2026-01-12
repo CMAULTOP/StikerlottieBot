@@ -123,6 +123,7 @@ bot.on(message("sticker"), async (ctx) => {
       source: zipBuffer,
       filename: `${s.set_name}.zip`,
     })
+
     await ctx.telegram.editMessageText(
       chatId,
       msg.message_id,
@@ -131,12 +132,10 @@ bot.on(message("sticker"), async (ctx) => {
     )
   } catch (err) {
     console.error(err)
-    await ctx.telegram.editMessageText(
-      chatId,
-      msg.message_id,
-      undefined,
-      "⚠️ Ошибка при обработке пака"
-    )
+    if (msg?.message_id) {
+      await ctx.telegram.editMessageText(
+        chatId,
+        msg.message_id,
         undefined,
         "⚠️ Ошибка при обработке пака"
       )
